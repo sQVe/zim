@@ -26,3 +26,7 @@
 	path = modules/autosuggestions/external
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 	ignore = untracked
+[submodule "modules/external/zsh-system-clipboard"]
+  path = modules/external/zsh-system-clipboard
+  url = https://github.com/kutsan/zsh-system-clipboard
+  ignore = untracked

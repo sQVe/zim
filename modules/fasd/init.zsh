@@ -11,15 +11,15 @@ fasd_cd() {
   fi
 }
 
-alias a='fasd -a'
-alias s='fasd -si'
-alias sd='fasd -sid'
-alias sf='fasd -sif'
-alias d='fasd -d'
-alias f='fasd -f'
-alias v='f -e vim -b viminfo'
 alias z='fasd_cd -d'
-alias zz='fasd_cd -d -i'
+alias zc='fasd -fe cat'
+alias zd='fasd -d'
+alias zf='fasd -f'
+alias zl='fasd -fe less'
+alias zo='fasd -ae mimeo'
+alias zr='fasd -de ranger'
+alias zv='fasd -fe nvim'
+alias zz='fasd -fe nvim'
 
 # add zsh hook
 _fasd_preexec() {
