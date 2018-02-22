@@ -26,7 +26,7 @@ fi
   setopt LOCAL_OPTIONS EXTENDED_GLOB
 
   # autoload searches fpath for function locations; add enabled module function paths
-  fpath=(${ZIM_HOME}/modules/${^zmodules}/functions(/FN) ${fpath})
+  fpath=(${ZIM_HOME}/modules/${^zmodules}/functions(/FN) ${fpath} /usr/share/bash-completion/completions)
 
   for mod_function in ${ZIM_HOME}/modules/${^zmodules}/functions/^(_*|prompt_*_setup|*.*)(-.N:t); do
     autoload -Uz ${mod_function}

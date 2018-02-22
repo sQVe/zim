@@ -1,0 +1,9 @@
+##################################################
+# Select a command from history.
+##################################################
+
+print -z $(
+  ([ -n "$ZSH_NAME" ] && fc -l 1 || history) |
+  fzf --query="$1" --select-1 --exit-0 --no-sort --tac |
+  sed 's/ *[0-9]* *//'
+)
