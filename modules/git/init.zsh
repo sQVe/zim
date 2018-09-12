@@ -188,3 +188,4 @@ alias ${gprefix}wX='git rm -rf'
 
 # Misc
 alias ${gprefix}..='cd "$(git-root || print .)"'
+alias ${gprefix}n='git init'
