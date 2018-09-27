@@ -1,7 +1,9 @@
-##################################################
+#  ┏━┓
+#  ┣━┫
+#  ╹ ╹
+
 # Open one or multiple files or directories in
 # Vim with current PWD as source.
-##################################################
 
 local files
 IFS=$'\n' files=($(fzf --query="$1" --preview '(highlight -l -O xterm256 -s dracula --stdout {} 2> /dev/null || cat {} || tree -C -L 1 --dirsfirst {}) 2> /dev/null | head -200' --multi --select-1 --exit-0))

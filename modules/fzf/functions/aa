@@ -1,6 +1,7 @@
-##################################################
-# Navigate into a directory.
-##################################################
+#  ┏━┓┏━┓
+#  ┣━┫┣━┫
+#  ╹ ╹╹ ╹
 
+# Navigate into a directory.
 local dir
 dir=$(fd ${1:-.} -t d | fzf --preview 'tree -C -L 1 --dirsfirst {}' --select-1 --exit-0) && cd "$dir"

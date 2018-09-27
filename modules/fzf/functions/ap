@@ -1,6 +1,8 @@
-##################################################
+#  ┏━┓┏━┓
+#  ┣━┫┣━┛
+#  ╹ ╹╹
+
 # Copy a password from LastPass CLI.
-##################################################
 
 local name
 name=$(lpass ls | ag -o '\S+\/{1}\S+(?!\[)' | fzf --query="$1" --select-1 --exit-0 | awk '{print $(NF)}' | sed 's/\]//g')
