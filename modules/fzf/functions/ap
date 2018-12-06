@@ -8,8 +8,13 @@ local name
 name=$(lpass ls | ag -o '\S+\/{1}\S+(?!\[)' | fzf --query="$1" --select-1 --exit-0 | awk '{print $(NF)}' | sed 's/\]//g')
 
 if [[ -n "$name" ]]; then
-  lpass show -c --password "$name"
-  echo "Copied password for: $name"
+  password=$(lpass show --password "$name")
+
+  if [[ -n "$password" ]]; then
+    echo "$password" | xsel -ib
+    echo "Copied password ($name)."
+    return 0
+  fi
 fi
 
-
+echo "No site found."
