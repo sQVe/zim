@@ -5,16 +5,11 @@
 # Copy a password from LastPass CLI.
 
 local name
-name=$(lpass ls | ag -o '\S+\/{1}\S+(?!\[)' | fzf --query="$1" --select-1 --exit-0 | awk '{print $(NF)}' | sed 's/\]//g')
+name=$(fd --extension gpg . $PASSWORD_STORE_DIR | sed "s#$PASSWORD_STORE_DIR/##" | sed s/\.gpg$// | fzf --query="$1" --select-1 --exit-0 | awk '{print $(NF)}')
 
 if [[ -n "$name" ]]; then
-  password=$(lpass show --password "$name")
-
-  if [[ -n "$password" ]]; then
-    echo "$password" | xsel -ib
-    echo "Copied password ($name)."
-    return 0
-  fi
+  pass show --clip "$name"
+else
+  echo "No password found."
 fi
 
-echo "No site found."
