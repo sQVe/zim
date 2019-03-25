@@ -22,8 +22,7 @@ Aliases
   * `gbm` renames a branch.
   * `gbM` renames a branch even if the new branch name already exists.
   * `gbs` lists branches and their commits with ancestry graphs.
-  * `gbS` lists local and remote branches and their commits with ancestry
-    graphs.
+  * `gbS` lists local and remote branches and their commits with ancestry graphs.
   * `gbx` deletes a branch.
   * `gbX` deletes a branch irrespective of its merged status.
 
@@ -34,8 +33,7 @@ Aliases
   * `gcm` commits with the given message.
   * `gco` checks out a branch or paths to the working tree.
   * `gcO` checks out hunks from the index or the tree interactively.
-  * `gcf` amends the tip of the current branch reusing the same log message as
-    *HEAD*.
+  * `gcf` amends the tip of the current branch reusing the same log message as *HEAD*.
   * `gcF` amends the tip of the current branch.
   * `gcp` applies changes introduced by existing commits.
   * `gcP` applies changes introduced by existing commits without committing.
@@ -72,8 +70,7 @@ Aliases
   * `gfc` clones a repository into a new directory.
   * `gfm` fetches from and merges with another repository or local branch.
   * `gfr` fetches from and rebases on top of another repository or local branch.
-  * `gfu` removes unexisting remote-tracking references, fetches all remotes and
-    merges.
+  * `gfu` removes unexisting remote-tracking references, fetches all remotes and merges.
 
 ### Grep
 
@@ -114,11 +111,9 @@ Aliases
   * `gm` joins two or more development histories together.
   * `gma` aborts the conflict resolution, and reconstructs the pre-merge state.
   * `gmC` performs the merge but does not commit.
-  * `gmF` performs the merge generating a commit even if the merge resolved as a
-    fast-forward.
+  * `gmF` performs the merge generating a commit even if the merge resolved as a fast-forward.
   * `gmS` commits with GPG signature.
-  * `gmv` verifies the GPG signature of the tip commit of the side branch being
-    merged.
+  * `gmv` verifies the GPG signature of the tip commit of the side branch being merged.
   * `gmt` runs the merge conflict resolution tools to resolve conflicts.
 
 ### Push
@@ -129,8 +124,7 @@ Aliases
   * `gpa` pushes all branches.
   * `gpA` pushes all branches and tags.
   * `gpt` pushes all tags.
-  * `gpc` pushes the current branch and adds *origin* as an upstream reference
-    for it.
+  * `gpc` pushes the current branch and adds *origin* as an upstream reference for it.
   * `gpp` pulls and pushes the current branch from *origin* to *origin*.
 
 ### Rebase
@@ -176,8 +170,7 @@ Aliases
   * `gSI` initializes and clones submodules recursively.
   * `gSl` lists the commits of all submodules.
   * `gSm` moves a submodule.
-  * `gSs` synchronizes submodules' remote URL to the value specified in
-    `.gitmodules`.
+  * `gSs` synchronizes submodules' remote URL to the value specified in `.gitmodules`.
   * `gSu` fetches and merges the latest changes for all submodules.
   * `gSx` removes a submodule.
 
@@ -194,15 +187,12 @@ Aliases
   * `gwS` displays working-tree status.
   * `gwd` displays changes between the working tree and the index (diff).
   * `gwD` displays changes between the working tree and the index (word diff).
-  * `gwr` resets the current *HEAD* to the specified state, does not touch the
-    index nor the working tree.
-  * `gwR` resets the current *HEAD*, index and working tree to the specified
-    state.
+  * `gwr` resets the current *HEAD* to the specified state, does not touch the index nor the working tree.
+  * `gwR` resets the current *HEAD*, index and working tree to the specified state.
   * `gwc` cleans untracked files from the working tree (dry-run).
   * `gwC` cleans untracked files from the working tree.
   * `gwx` removes files from the working tree and from the index recursively.
-  * `gwX` removes files from the working tree and from the index recursively and
-    forcefully.
+  * `gwX` removes files from the working tree and from the index recursively and forcefully.
 
 ### Misc
 
