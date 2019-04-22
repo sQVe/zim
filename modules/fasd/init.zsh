@@ -11,7 +11,7 @@ fasd_cd() {
   fi
 }
 
-alias z='fasd -fe nvim-cd'
+alias z='fasd -fe nvim-pwd'
 alias zz='fasd_cd -d'
 
 # add zsh hook
