@@ -6,7 +6,7 @@
 # Vim with current PWD as source.
 
 local files
-IFS=$'\n' files=($(fd ${1:-.} -t f | fzf --query="$1" --preview '(highlight -l -O truecolor -s dracula --stdout {} 2> /dev/null || cat {} || tree -C -L 1 --dirsfirst {}) 2> /dev/null | head -200' --multi --select-1 --exit-0))
+IFS=$'\n' files=($(fd ${1:-.} --type f | fzf --query="$1" --preview '(highlight -l -O truecolor -s dracula --stdout {} 2> /dev/null || cat {}) 2> /dev/null | head -200' --multi --select-1 --exit-0))
 
 if [[ -n "$files" ]]; then
   nvim-pwd "${files[@]}"

@@ -4,4 +4,4 @@
 
 # Navigate into a directory.
 local dir
-dir=$(fd ${1:-.} -t d | fzf --preview 'tree -C -L 1 --dirsfirst {}' --select-1 --exit-0) && cd "$dir"
+dir=$(fd ${1:-.} --type d | fzf --preview 'exa -T -L 1 --group-directories-first --color=always {}' --select-1 --exit-0) && cd "$dir"
