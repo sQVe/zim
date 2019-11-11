@@ -17,9 +17,6 @@ _git_log_oneline_medium_format='%C(bold yellow)%h%C(reset) %<(50,trunc)%s %C(bol
 #
 
 () {
-  local gprefix
-  zstyle -s ':zim:git' aliases-prefix 'gprefix' || gprefix=g
-
   # Git
   alias g='git'
 
@@ -189,4 +186,5 @@ _git_log_oneline_medium_format='%C(bold yellow)%h%C(reset) %<(50,trunc)%s %C(bol
 
   # Misc
   alias g..='cd "$(git-root || print .)"'
+  alias gn='git init'
 }
