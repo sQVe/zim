@@ -6,7 +6,7 @@
 # Vim with locate as source.
 
 local files
-files=($(locate / | fzf --query="$1" --preview '(highlight -l -O truecolor -s dracula --stdout {} 2> /dev/null || cat {} || exa -T -L 1 --group-directories-first --color=always {}) 2> /dev/null | head -200' --multi --select-1 --exit-0))
+files=($(locate / | fzf --query="$1" --preview '(highlight -l -O truecolor --base16=gruvbox-dark-medium --stdout {} 2> /dev/null || cat {} || exa -T -L 1 --group-directories-first --color=always {}) 2> /dev/null | head -200' --multi --select-1 --exit-0))
 
 if [[ -n "$files" ]]; then
   nvim-pwd "${files[@]}"
